@@ -16,5 +16,9 @@
     <p>{{$comic->sale_date}}</p>
     <p>{{$comic->series}}</p>
     <p>{{$comic->type}}</p>
+
+    <div>
+        <a href="{{route('comics.edit', $comic->id)}}">Edita</a>
+    </div>
 </body>
 </html>

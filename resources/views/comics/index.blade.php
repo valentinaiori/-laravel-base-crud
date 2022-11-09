@@ -14,6 +14,10 @@
             <a href="{{ route('comics.show', $comic->id) }}"> {{ $comic->title }} </a>
         </div>
     @endforeach
+
+    <a href="{{route('comics.create')}}">Aggiungi Nuovo</a>
+
+    <input type="submit" value="Aggiungi">
 </body>
 
 </html>

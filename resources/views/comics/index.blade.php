@@ -13,11 +13,18 @@
         <div>
             <a href="{{ route('comics.show', $comic->id) }}"> {{ $comic->title }} </a>
         </div>
+        <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="CANCELLA">
+        </form>
     @endforeach
 
     <a href="{{route('comics.create')}}">Aggiungi Nuovo</a>
 
-    <input type="submit" value="Aggiungi">
+
+
+
 </body>
 
 </html>
